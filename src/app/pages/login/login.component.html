@@ -1,0 +1,192 @@
+<div class="row" style="margin-top: 4%;">
+    <div class="col m4 offset-m4 s12">
+        <div class="card">
+            <div class="card-content container">
+
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col s5">
+                        <img class="right" style="margin-top: 15px" src="assets/images/datum-redsoft-mobile.png"
+                            height="50px" alt="">   
+                    </div>
+                    <div class="col s2">
+                        <div class="vl center"></div>
+                    </div>
+
+                    <div class="col s5">
+                        <img class="left" src="assets/images/wc.png" height="90px" alt="">
+                    </div>
+
+                </div>
+
+
+
+                <form *ngIf="pantalla=='login'" [formGroup]="loginForm">
+
+                    <div class="row">
+                        <div class="col s12 center" style="margin-top: 8%;">
+
+
+                            <h5 class="title-session">Jugar Quiniela</h5>
+                            <p class="flow-text">
+                                Utiliza tu código Asignado
+                            </p>
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="text" placeholder="Código" formControlName="codigo">
+                            <a class="link pink-text text-darken-4 left" (click)="pantalla='olvideCredenciales'"
+                                style="cursor: pointer;">
+                                <strong>¿Has olvidado tu código?</strong>
+                            </a>
+
+
+                        </div>
+
+                        <div class="col s12" style="margin-top: 20px; margin-bottom: 70px">
+
+                            <button class="btn waves-effect  pink darken-3 waves-light right col s12" type="button"
+                                (click)="submit()">
+                                Ingresar
+                            </button>
+
+                            <p class="" style="margin-top: 20%;" *ngIf="idQuiniela">
+                                ¿No tienes código?
+                                <a class="link " (click)="clickIrARegistrate()">
+
+                                    Registrate Aqui
+                                </a>
+                            </p>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+                </form>
+
+                <form *ngIf="pantalla=='registrate'" class="row" [formGroup]="registrateForm"
+                    (ngSubmit)="submitRegistrate()">
+                    <div class="col s12 center" style="margin-top: 8%;">
+
+
+                        <h5 class="title-session">Registrate</h5>
+                        <p class="flow-text">
+                            Por favor ingresa tus datos para participar
+                        </p>
+                    </div>
+
+                    <div class="col-md-12 ">
+
+
+                        <input type="text" placeholder="Nombre completo" class="form-control" formControlName="nombre"
+                            style="margin-top: 30px;">
+
+                        <input type="text" placeholder="Email" class="form-control" formControlName="correo">
+
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <button class="btn  pink darken-3 col s12" style="margin-top: 20px;"
+                            type="submit">Registrarme</button>
+                        <br>
+                        <button (click)="clickIrARegistrate()" *ngIf="estado!='register'" style="margin-top: 20px;"
+                            class="btn grey darken-2 col s12" type="button">Regresar</button>
+                        <br>
+                        <br>
+                    </div>
+
+
+
+                </form>
+
+                <form *ngIf="pantalla=='olvideCredenciales'" class="row" [formGroup]="olvidoForm"
+                    (ngSubmit)="olvidoCredencial()">
+                    <div class="col s12 center" style="margin-top: 8%;">
+
+
+                        <h5 class="title-session">Olvide mi código</h5>
+                        <p class="flow-text">
+                            Por favor ingresa tus datos para recuperar código
+                        </p>
+                    </div>
+
+                    <div class="col-md-12 ">
+                        <input type="text" placeholder="Email" class="form-control" formControlName="correo">
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <button class="btn  pink darken-3 col s12" style="margin-top: 20px;" type="submit">Solicitar
+                            Codigo</button>
+                        <br>
+                        <button (click)="clickIrARegistrate()" style="margin-top: 20px;"
+                            class="btn grey darken-2 col s12" type="button">Regresar</button>
+                    </div>
+
+
+
+                </form>
+
+
+                <div class="row">
+                    <div class="col-s12">
+                        <p class="center grey-text text-darken-2">
+                            Derechos reservados &copy;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="row fadeIn dos">
+    <div class="col-6">
+        <img class="rounded mx-auto d-block mt-3" src="assets/images/datum-redsoft-mobile.png"
+            height="60px" alt="">
+    </div>
+    <div class="col-6">
+        <img class="rounded mx-auto d-block" height="90" src="assets/images/laeeb.png" />
+    </div>
+</div>
+
+<hr>
+<h1 class="text-center title-login fadeIn dos">
+    QUINIELA
+    <strong class="text-danger">2022</strong>
+</h1>
+<hr>
+
+<form *ngIf="pantalla=='login'" class="row mt-3 fadeIn" [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div class="col m12  mt-3">
+        <h3>Iniciar sesión</h3>
+        <label class="text-justify no-tengo-cta">
+            Por favor, ingrese su <strong>Código</strong> de participante:
+
+        </label>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" placeholder="Código" class="form-control"
+                    formControlName="codigo">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col m12">
+        <button class="btn btn-block btn-danger mt-3 " type="submit">Ingresar</button>
+    </div>
+
+    <div class="col m12">
+        <p class="text-center no-tengo-cta mt-5">
+            ¿No tienes código?
+            <a (click)="clickIrARegistrate()" class="link text-danger">Registrate</a>
+        </p>
+    </div>
+
+</form> -->

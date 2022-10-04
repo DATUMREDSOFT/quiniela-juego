@@ -1,0 +1,16 @@
+<app-navbar *ngIf="informacionJuego.state=='success'" [informacionJuego]="informacionJuego" [idParticipante]="idParticipante" [idQuiniela]="idQuiniela"></app-navbar>
+<div class="container" *ngIf="informacionJuego.state=='success'">
+    
+    <ng-container *ngIf="informacionPreguntas.state=='success'">
+        <div class="row">
+            <div class="col s12">
+                <h5>Preguntas</h5>
+            </div>
+            <div class="col s12 l12 xl12"  *ngFor="let d of informacionPreguntas.data" >
+                <app-grupo-preguntas *ngIf="informacionPreguntas.state=='success'"  [informacionPreguntas]="d"></app-grupo-preguntas>
+            </div>
+        </div>
+    </ng-container>
+
+
+</div>

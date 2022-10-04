@@ -1,0 +1,33 @@
+<app-navbar *ngIf="informacionJuego.state=='success'" [titulo]="['Ranking']" [informacionJuego]="informacionJuego"
+    [idParticipante]="idParticipante" [idQuiniela]="idQuiniela" [page]="['Premios']"></app-navbar>
+
+<main class="container">
+
+    <div class="row">
+
+        <div class="col s12 l4" *ngFor="let d of informacionPremios.data ;  index as index">
+            <div class="card">
+                <div class="card-content center">
+                  <div class="row">
+                    <div class="col s12">
+                        
+
+                        <img class="left" height="40px" src="assets/images/ic-{{index==0?'primer':index==1?'segundo':index==2?'tercer':''}}-lugar.png" alt="">
+                        <h5 class="center"> {{d.titulo}}</h5>
+                    </div>
+                    <div class="col s12">
+                        <img class="responsive-img" src="{{d.multimedia}}" >
+                    </div>
+                    
+
+                    <div class="col s12">
+                        <h5>{{d.descripcion}}</h5>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+</main>

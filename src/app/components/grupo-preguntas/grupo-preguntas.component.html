@@ -1,0 +1,65 @@
+
+<div class="row">
+   
+    <div class="col l6 s12" *ngFor="let d of informacionPreguntas.preguntas; index as index">
+        <table>
+            <tr>
+                <td  style="width: 75%;">
+                    {{d.pregunta}}
+                 </td>
+                 <td style="width: 25%;">
+                     <select *ngIf="(converterToDate(fechaMaxima) <= date)" class="browser-default" [(ngModel)]="d.respuestaSeleccionada" name="idRespuesta{{index+1}}" disabled="">
+                         <option value="" disabled selected>Seleccione una respuesta</option>
+                         <option *ngFor="let r of d.respuesta" value="{{r.id}}">{{r.respuesta}}</option>
+                       </select>
+
+                     <select *ngIf="!(converterToDate(fechaMaxima) <= date)" class="browser-default" [(ngModel)]="d.respuestaSeleccionada" name="idRespuesta{{index+1}}" (change)="salvarEncuentro(d, index)">
+                         <option value="" disabled selected>Seleccione una respuesta</option>
+                         <option *ngFor="let r of d.respuesta" value="{{r.id}}">{{r.respuesta}}</option>
+                       </select>
+                 </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+  <!--     <div class="card">
+        <div class="card-content">
+          
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Pregunta
+                        </th>
+                        <th>
+                            Respuesta
+                        </th>
+    
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr *ngFor="let d of informacionPreguntas.preguntas; index as index">
+                        <td  style="width: 75%;">
+                           {{d.pregunta}}
+                        </td>
+                        <td style="width: 25%;">
+                            <select *ngIf="(converterToDate(fechaMaxima) <= date)" class="browser-default" [(ngModel)]="d.respuestaSeleccionada" name="idRespuesta{{index+1}}" disabled="">
+                                <option value="" disabled selected>Seleccione una respuesta</option>
+                                <option *ngFor="let r of d.respuesta" value="{{r.id}}">{{r.respuesta}}</option>
+                              </select>
+  
+                            <select *ngIf="!(converterToDate(fechaMaxima) <= date)" class="browser-default" [(ngModel)]="d.respuestaSeleccionada" name="idRespuesta{{index+1}}" (change)="salvarEncuentro(d, index)">
+                                <option value="" disabled selected>Seleccione una respuesta</option>
+                                <option *ngFor="let r of d.respuesta" value="{{r.id}}">{{r.respuesta}}</option>
+                              </select>
+                        </td>
+                    </tr>
+                    <tr *ngIf="!informacionPreguntas.preguntas">
+                        <td class="center" colspan="2">No hay preguntas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div> -->

@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  /* UrlAPi:'http://192.168.10.116:8080',
+  http:'http://', */
+  UrlAPi:'http://quiniela.eastus2.cloudapp.azure.com:8080',
+  http:'http://',
 };
 
 /*

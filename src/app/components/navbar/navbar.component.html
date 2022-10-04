@@ -1,0 +1,69 @@
+<div class="navbar-fixed">
+  <nav class="white">
+    <div class="nav-wrapper pink-text">
+      <a href="#" class="brand-logo pink-text"> {{informacionJuego.data.quiniela.nombreCompeticion}}</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger pink-text"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="sidenav-close pink-text" [routerLinkActive]="['active']"> <a class="pink-text"
+            [routerLink]="[ '/home', idParticipante ]"> <i class="material-icons left">lens_blur</i> Mis Quinielas</a>
+        </li>
+        <li class="sidenav-close" [routerLinkActive]="['active']"> <a class="pink-text"
+            [routerLink]="[ '/juego', idParticipante , idQuiniela]"> <i class="material-icons left">sports_soccer</i>
+            Juego</a></li>
+        <li class="sidenav-close" [routerLinkActive]="['active']"> <a class="pink-text"
+            [routerLink]="[ '/ranking', idParticipante , idQuiniela]"> <i class="material-icons left">local_police</i>
+            Ranking</a>
+        </li>
+        <li class="sidenav-close" [routerLinkActive]="['active']"> <a class="pink-text"
+            [routerLink]="[ '/premios', idParticipante , idQuiniela]"> <i class="material-icons left">emoji_events</i>
+            Premios</a>
+        </li>
+        <li class="sidenav-close" [routerLinkActive]="['active']"> <a class="pink-text" *ngIf="informacionJuego.data.participante.estado=='Premium'"
+          href="https://api.whatsapp.com/send?text={{text}}/login/{{idQuiniela}}XC-DS/register" target="_blank"> <i class="material-icons left">share</i>
+            Invitar Amigos</a>
+        </li>
+        <li class="sidenav-close"><a href="" class="pink-text">Salir <i class="material-icons right">logout</i></a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container-fluid" style="margin-top: 10px;">
+  <div class="row">
+    <div class="col s12">
+      <!-- <img class="left logo-competicion" style="margin-top: 20px;"
+        src="{{informacionJuego.data.quiniela.multimediaCompeticion}}" alt=""> -->
+      <h3 class="quiniela white-text center" style=" text-shadow: 0 0 10px #000;">
+        {{informacionJuego.data.quiniela.nombreQuiniela}}
+      </h3>
+
+      <h3 class="quiniela white-text center " style=" text-shadow: 0 0 10px #000;">
+        {{page}}
+      </h3>
+      <!--  <h3 class="competicion white-text" style="margin-top: 0px;">{{titulo}}</h3> -->
+     <!--  <p class="center" style="text-shadow: 0 0 6px #6d0f34;">
+        <a class="white-text " *ngIf="informacionJuego.data.participante.estado=='Premium'"
+          href="https://api.whatsapp.com/send?text={{text}}/login/{{idQuiniela}}XC-DS/register" target="_blank">
+          Invitar amigos a esta quiniela
+          <i class="material-icons ">
+            send
+          </i>
+        </a>
+      </p> -->
+
+    </div>
+  </div>
+</div>
+
+<ul class="sidenav" id="mobile-demo">
+  <li class="sidenav-close" [routerLinkActive]="['active']"> <a [routerLink]="[ '/home', idParticipante ]">Mis
+      Quinielas</a></li>
+  <li class="sidenav-close" [routerLinkActive]="['active']"> <a
+      [routerLink]="[ '/juego', idParticipante , idQuiniela]">Juego</a></li>
+  <li class="sidenav-close" [routerLinkActive]="['active']"> <a
+      [routerLink]="[ '/ranking', idParticipante , idQuiniela]">Ranking</a>
+  </li>
+  <li class="sidenav-close" [routerLinkActive]="['active']"> <a
+      [routerLink]="[ '/premios', idParticipante , idQuiniela]">Premios</a>
+  </li>
+  <li class="sidenav-close"><a href="">Salir</a></li>
+</ul>

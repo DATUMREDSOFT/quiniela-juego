@@ -1,0 +1,155 @@
+<div class="row">
+    <div class="col s12 ">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12 m12">
+
+                        <h4 class="center" style="margin-bottom: 0px;">{{fase.nombre}}</h4>
+                        <p class="center grey-text" style="margin-top: 0px; font-size:13px; margin-bottom: 20px;">
+                            <strong>Fecha máxima para responder:</strong> {{fase.fechaMaxRespuesta | date:'short'}}
+                        </p>
+
+                    </div>
+
+                    <div class="col s12 m4">
+                        <h5 class="center" style="margin-bottom: 0px;">{{fase.aciertoGanador}} pts.</h5>
+                        <p class="center" style="margin-top: 0px; font-size:13px">
+                            <strong>Acierto a Ganador</strong>
+                        </p>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <h5 class="center" style="margin-bottom: 0px;">{{fase.aciertoResultado}} pts.</h5>
+                        <p class="center" style="margin-top: 0px; font-size:13px">
+                            <strong>Acierto a Marcador</strong>
+                        </p>
+                    </div>
+                    <div class="col s12 m4">
+                        <h5 class="center" style="margin-bottom: 0px;">{{fase.aciertoPreguntas}} pts.</h5>
+                        <p class="center" style="margin-top: 0px; font-size:13px">
+                            <strong>Acierto a Preguntas</strong>
+                        </p>
+                    </div>
+                    <div class="col s12">
+                        <hr style="margin-top: 30px;">
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col s12">
+                        <h5>Encuentros</h5>
+                    </div>
+
+                    <div class="col s12 l6">
+                        <table>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col s12 l6">
+                        <table>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col s12 l6" *ngFor="let d of fase.partidos; index as index">
+                        <table>
+                            <tr>
+                                <td class="center" style="width: 35%;">
+                                    <img src="{{d.logoLocal}}" height="20px" alt=" "> <br>
+                                    {{d.local}}
+                                </td>
+                                <td style="width: 15%;">
+                                    <h5 class="center" *ngIf="(converterToDate(fase.fechaMaxRespuesta) <= date)">
+                                        {{d.previstoLocal}}</h5>
+                                    <input type="text" [(ngModel)]="d.previstoLocal"
+                                        *ngIf="!(converterToDate(fase.fechaMaxRespuesta) <= date)"
+                                        name="previstoLocal{{index+1}}"
+                                        (change)="salvarEncuentro(d, index, fase.fechaMaxRespuesta)" mask="000">
+                                </td>
+                                <td style="width: 15%;">
+                                    <h5 class="center" *ngIf="(converterToDate(fase.fechaMaxRespuesta) <= date)">
+                                        {{d.previstoVisitante}}</h5>
+                                    <input type="text" mask="000" [(ngModel)]="d.previstoVisitante"
+                                        *ngIf="!(converterToDate(fase.fechaMaxRespuesta) <= date)"
+                                        name="previstoVisitante{{index+1}}"
+                                        (change)="salvarEncuentro(d, index, fase.fechaMaxRespuesta)">
+                                </td>
+                                <td class="center" style="width: 35%;">
+                                    <img src="{{d.logoVisita}}" height="20px" alt=" "> <br>
+                                    {{d.visita}}
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                 <!--    <div class="col s12 m12">
+                        <table class="striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="8">
+
+                                        <br>
+
+                                    </th>
+
+                                </tr>
+
+
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let d of fase.partidos; index as index">
+                                    <td class="center" style="width: 35%;">
+                                        <img src="{{d.logoLocal}}" height="20px" alt=" "> <br>
+                                        {{d.local}}
+                                    </td>
+                                    <td style="width: 15%;">
+                                        <h5 class="center" *ngIf="(converterToDate(fase.fechaMaxRespuesta) <= date)">
+                                            {{d.previstoLocal}}</h5>
+                                        <input type="text" [(ngModel)]="d.previstoLocal"
+                                            *ngIf="!(converterToDate(fase.fechaMaxRespuesta) <= date)"
+                                            name="previstoLocal{{index+1}}"
+                                            (change)="salvarEncuentro(d, index, fase.fechaMaxRespuesta)" mask="000">
+                                    </td>
+                                    <td style="width: 15%;">
+                                        <h5 class="center" *ngIf="(converterToDate(fase.fechaMaxRespuesta) <= date)">
+                                            {{d.previstoVisitante}}</h5>
+                                        <input type="text" mask="000" [(ngModel)]="d.previstoVisitante"
+                                            *ngIf="!(converterToDate(fase.fechaMaxRespuesta) <= date)"
+                                            name="previstoVisitante{{index+1}}"
+                                            (change)="salvarEncuentro(d, index, fase.fechaMaxRespuesta)">
+                                    </td>
+                                    <td class="center" style="width: 35%;">
+                                        <img src="{{d.logoVisita}}" height="20px" alt=" "> <br>
+                                        {{d.visita}}
+
+                                    </td>
+                                </tr>
+                                <tr *ngIf="fase.partidos && fase.partidos.length==0">
+                                    <td colspan="4" class="center"> No hay encuentros</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                    <div class="col s12 ">
+                        <br>
+                        <h5>Preguntas</h5>
+
+                 
+                       
+                    </div>
+                    <app-grupo-preguntas [informacionPreguntas]="fase" [fechaMaxima]="fase.fechaMaxRespuesta">
+                    </app-grupo-preguntas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

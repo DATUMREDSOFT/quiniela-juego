@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+ 
+  font-family: "Qatar2022Arabic-Bold";
+  src: local("Qatar2022Arabic-Bold"), url(./assets/tipography/Qatar2022Arabic-Bold.ttf) format("truetype");
+}
+
+*{
+  font-family: "Qatar2022Arabic-Bold";
+}
+
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #6d0f34 !important;
+    box-shadow: 0 1px 0 0 #6d0f34 !important;
+}
+
+.logo-competicion {
+    height: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo-competicion {
+        height: 100px;
+    }
+    .quiniela{
+        font-size: 2.5rem;
+    }
+
+  }
+
+  $image:'assets/images/bg-qatar.jpg';
+
+  body { 
+    background: url($image) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  nav, .nav-wrapper { 
+   /*  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),url($image) no-repeat center center fixed !important; 
+    background: none; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    
+  }
+
+  .pink{
+    background: #6d0f34 !important;
+  }
+
+  .pink-text{
+    color: #6d0f34 !important;
+  }
+
+  body{
+    color: #6d0f34 !important;
+  }
+
+  .swal2-confirm{
+    background-color: #6d0f34 !important;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+ // box-shadow: none !important;
+}
+
+nav ul li.active {
+  border-bottom: 4px solid;
+}
+
+.vl {
+  border-left: 1px solid rgb(93, 93, 93);
+  height: 100px;
+}
