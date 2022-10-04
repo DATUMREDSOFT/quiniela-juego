@@ -1,0 +1,115 @@
+{
+  "configVersion": 1,
+  "timestamp": 1664898137750,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.cde2dbed237cf474.js",
+        "/manifest.webmanifest",
+        "/polyfills.14ed9e8f46d12ad6.js",
+        "/runtime.6d6edbbf5cb227ba.js",
+        "/scripts.d02861943291afeb.js",
+        "/styles.c60e5310f398028b.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/Qatar2022Arabic-Bold.b1dcf78ca9f26677.ttf",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/images/Liferay DXP 7.2 Compatibility Matrix.pdf",
+        "/assets/images/bg-qatar.jpg",
+        "/assets/images/bg-qatar2.jpg",
+        "/assets/images/datum-redsoft-mobile.png",
+        "/assets/images/ic-giftcard.png",
+        "/assets/images/ic-primer-lugar.png",
+        "/assets/images/ic-segundo-lugar.png",
+        "/assets/images/ic-tercer-lugar.png",
+        "/assets/images/laeeb.png",
+        "/assets/images/qatar.png",
+        "/assets/images/wc.png",
+        "/assets/tipography/Graphik Arabic Medium.otf",
+        "/assets/tipography/Qatar2022Arabic-Bold.ttf",
+        "/assets/tipography/Qatar2022Arabic-Heavy.ttf",
+        "/bg-qatar.190a2612f0c92544.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/Qatar2022Arabic-Bold.b1dcf78ca9f26677.ttf": "26590f3d0a4178d250c38ab475f4fd22fd3ef6e4",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/images/Liferay DXP 7.2 Compatibility Matrix.pdf": "613311e83bf66a353cc1e8f72b86536e24ecd838",
+    "/assets/images/bg-qatar.jpg": "153b9d8f75c8f8e2db71ef47f418c84b6930cb6f",
+    "/assets/images/bg-qatar2.jpg": "de1b837a3ee2b9573b93255e01221b49f492d146",
+    "/assets/images/datum-redsoft-mobile.png": "87c06fc2f21456c364ff582dcb14884b0f903f9a",
+    "/assets/images/ic-giftcard.png": "754a8eeef3c98a1bf10b4586b36d88118f0ad9f3",
+    "/assets/images/ic-primer-lugar.png": "139cc4c728aca307a68014e4f785542aeaa8a283",
+    "/assets/images/ic-segundo-lugar.png": "ce66889f041942d8a933ba65fa49c07e401fb80a",
+    "/assets/images/ic-tercer-lugar.png": "90d7beaca8a073b36e74916279827cf30f5bf0fa",
+    "/assets/images/laeeb.png": "9593a5c9ed7f19bc7c432e83454f2746bcc58032",
+    "/assets/images/qatar.png": "40829d47d44342ae204efb44d4434037de3978b3",
+    "/assets/images/wc.png": "628d2094ba07bc26a581ce0aad5de5b17817222a",
+    "/assets/tipography/Graphik Arabic Medium.otf": "11841984f30e8ea30c4ca35a7d2d1d8ffa27af95",
+    "/assets/tipography/Qatar2022Arabic-Bold.ttf": "26590f3d0a4178d250c38ab475f4fd22fd3ef6e4",
+    "/assets/tipography/Qatar2022Arabic-Heavy.ttf": "f8770a6fd79dc1f70851ead117a00a06cc2d7c19",
+    "/bg-qatar.190a2612f0c92544.jpg": "153b9d8f75c8f8e2db71ef47f418c84b6930cb6f",
+    "/favicon.ico": "7585995cfa161ecd145ed0ab9cf5edf8f46a71d1",
+    "/index.html": "0ed7cca985c0479fd37d34408347761cefee87bd",
+    "/main.cde2dbed237cf474.js": "5987906bfa5a04eea0ca192bd8fc170cb558ea8f",
+    "/manifest.webmanifest": "83579ba6a94fccff3efe399ddc471c629f8a1543",
+    "/polyfills.14ed9e8f46d12ad6.js": "97f281f1323e6176dfa535b53445dbfc26420710",
+    "/runtime.6d6edbbf5cb227ba.js": "8703599285381ccb7706dc0f0071824ae0cb006c",
+    "/scripts.d02861943291afeb.js": "0e22d19e53c95083739f214957ed99b502ab532b",
+    "/styles.c60e5310f398028b.css": "4f89a744145c27c0f595c321173b1e85e4cd3ea7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
