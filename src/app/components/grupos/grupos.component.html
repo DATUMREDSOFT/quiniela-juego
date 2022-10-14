@@ -7,7 +7,7 @@
 
                         <h4 class="center" style="margin-bottom: 0px;">{{fase.nombre}}</h4>
                         <p class="center grey-text" style="margin-top: 0px; font-size:13px; margin-bottom: 20px;">
-                            <strong>Fecha máxima para responder:</strong> {{fase.fechaMaxRespuesta | date:'short'}}
+                            <strong>Fecha máxima para responder:</strong> {{fase.fechaMaxRespuesta | date}} a las  {{fase.fechaMaxRespuesta | date:'fullTime'}}
                         </p>
 
                     </div>
@@ -15,17 +15,17 @@
                     <div class="col s12 m4">
                         <h5 class="center" style="margin-bottom: 0px;">{{fase.aciertoGanador}} pts.</h5>
                         <p class="center" style="margin-top: 0px; font-size:13px">
-                            <strong>Acierto a Ganador</strong>
+                            <strong>Acierto a Resultado</strong>
                         </p>
                     </div>
 
-                    <div class="col s12 m4">
+                    <div class="col s12 m4" >
                         <h5 class="center" style="margin-bottom: 0px;">{{fase.aciertoResultado}} pts.</h5>
                         <p class="center" style="margin-top: 0px; font-size:13px">
                             <strong>Acierto a Marcador</strong>
                         </p>
                     </div>
-                    <div class="col s12 m4">
+                    <div class="col s12 m4" *ngIf="fase.aciertoPreguntas!=0">
                         <h5 class="center" style="margin-bottom: 0px;">{{fase.aciertoPreguntas}} pts.</h5>
                         <p class="center" style="margin-top: 0px; font-size:13px">
                             <strong>Acierto a Preguntas</strong>
@@ -90,7 +90,7 @@
                         </table>
                     </div>
 
-                 <!--    <div class="col s12 m12">
+                    <!--    <div class="col s12 m12">
                         <table class="striped">
                             <thead>
                                 <tr>
@@ -139,15 +139,18 @@
                             </tbody>
                         </table>
                     </div> -->
-                    <div class="col s12 ">
-                        <br>
-                        <h5>Preguntas</h5>
 
-                 
-                       
-                    </div>
-                    <app-grupo-preguntas [informacionPreguntas]="fase" [fechaMaxima]="fase.fechaMaxRespuesta">
-                    </app-grupo-preguntas>
+                    <ng-container *ngIf="fase.aciertoPreguntas!=0">
+                        <div class="col s12 ">
+                            <br>
+                            <h5>Preguntas</h5>
+
+
+
+                        </div>
+                        <app-grupo-preguntas [informacionPreguntas]="fase" [fechaMaxima]="fase.fechaMaxRespuesta">
+                        </app-grupo-preguntas>
+                    </ng-container>
                 </div>
             </div>
         </div>
