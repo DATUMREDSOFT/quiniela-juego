@@ -18,8 +18,12 @@
             [routerLink]="[ '/premios', idParticipante , idQuiniela]"> <i class="material-icons left">emoji_events</i>
             Premios</a>
         </li>
-        <li class="sidenav-close" [routerLinkActive]="['active']"> <a class="pink-text" *ngIf="informacionJuego.data.participante.estado=='Premium'"
+        <!-- <li class="sidenav-close" [routerLinkActive]="['active']"> <a class="pink-text" *ngIf="informacionJuego.data.participante.estado=='Premium'"
           href="https://api.whatsapp.com/send?text={{text}}/login/{{idQuiniela}}XC-DS/register" target="_blank"> <i class="material-icons left">share</i>
+            Invitar Amigos</a>
+        </li> -->
+        <li class="sidenav-close" [routerLinkActive]="['active']"> <a class="pink-text" *ngIf="informacionJuego.data.participante.estado=='Premium'"
+          (click)="generarCodigo()" > <i class="material-icons left">share</i>
             Invitar Amigos</a>
         </li>
         <li class="sidenav-close"><a href="" class="pink-text">Salir <i class="material-icons right">logout</i></a></li>
