@@ -124,8 +124,14 @@ Registrate aca:%0A
       'success'
     );
     this.pantalla = 'compartir'
-
+    this.url = '';
     this.url = `${environment.http}${location.host}/sing-up/${(this.informacionPreRegistro.data.id)}`;
+
+    this.text = `
+      *Participa en nuestra quiniela DATUM*%0A%0A
+      Registrate aca:%0A 
+    `;
+
 
     this.text = `${this.text} ${this.url}`
   }

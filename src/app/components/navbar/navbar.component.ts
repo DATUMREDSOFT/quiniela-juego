@@ -33,7 +33,7 @@ Registrate aca: ${environment.http}${location.host}
     $('.sidenav').sidenav();
   }
 
- 
+
 
 
 
@@ -73,14 +73,17 @@ Registrate aca: ${environment.http}${location.host}
 
   compartirWsp(data: string) {
 
+    this.url = '';
+
     this.url = `${environment.http}${location.host}/sing-up/${(this.informacionPreRegistro.data.id)}`;
 
+    this.text = `
+    *Participa en nuestra quiniela DATUM*%0A%0A
+    Registrate aca:%0A 
+  `;
+
     this.text = `${this.text} ${this.url}`
-   /*  Swal.fire(
-      'Link Generado',
-      this.url,
-      'success'
-    ); */
+
 
     Swal.fire({
       title: 'Link Generado',
@@ -88,11 +91,11 @@ Registrate aca: ${environment.http}${location.host}
       html: ` <p>${this.url}</p> <a href="https://api.whatsapp.com/send?text=${this.text}" target="_blank" class="btn green" *ngIf="url!=''" >Compartir por Whatsapp</a>`
 
     }).then((result) => {
-      
+
     })
 
 
-   
+
   }
 
 
