@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class RankingComponent implements OnInit {
 
+  filterQuery: string='';
   idQuiniela: any = 0;
   idParticipante: any = 0;
   informacionJuego: ResponseModel = { state: 'fail', data: { quiniela: null }, message: '' };
@@ -30,7 +31,13 @@ export class RankingComponent implements OnInit {
 
   getPuntosByQuiniela(){
     this.apiQuiniela.getPuntosByQuiniela(this.idQuiniela).subscribe(_response => {
-      this.informacionRanking = _response;
+      let c =1;
+      for(let d of _response.data){
+        _response.data[c-1]={...d, index:c};
+        c++;
+      }
+      
+      this.informacionRanking =_response ;
      });
   }
 

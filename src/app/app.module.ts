@@ -21,6 +21,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { SingUpComponent } from './pages/sing-up/sing-up.component'
 import { OrderModule } from 'ngx-order-pipe';
 import { RankingComponent } from './pages/ranking/ranking.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { RankingComponent } from './pages/ranking/ranking.component';
     NavbarHomeComponent,
     SingUpComponent,
     RankingComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
