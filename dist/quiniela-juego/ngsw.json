@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1668107614707,
+  "timestamp": 1668209885088,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -50,6 +50,11 @@
         "/assets/images/laeeb.png",
         "/assets/images/qatar.png",
         "/assets/images/wc.png",
+        "/assets/premios/premio-quiniela-01.png",
+        "/assets/premios/premio-quiniela-02.png",
+        "/assets/premios/premio-quiniela-03.png",
+        "/assets/premios/premio-quiniela-04.png",
+        "/assets/premios/premio-quiniela-05.png",
         "/assets/tipography/Graphik Arabic Medium.otf",
         "/assets/tipography/Qatar2022Arabic-Bold.ttf",
         "/assets/tipography/Qatar2022Arabic-Heavy.ttf",
@@ -80,6 +85,11 @@
     "/assets/images/laeeb.png": "9593a5c9ed7f19bc7c432e83454f2746bcc58032",
     "/assets/images/qatar.png": "40829d47d44342ae204efb44d4434037de3978b3",
     "/assets/images/wc.png": "628d2094ba07bc26a581ce0aad5de5b17817222a",
+    "/assets/premios/premio-quiniela-01.png": "1f937ce32c10fe234793718a4210b2352d0b9903",
+    "/assets/premios/premio-quiniela-02.png": "3559de19bee76e34f3e52dafab6fe7eb50d96790",
+    "/assets/premios/premio-quiniela-03.png": "c1197a82f250bc9543bad8a0511c70561a6b0501",
+    "/assets/premios/premio-quiniela-04.png": "bdceb169e5848e4737bb823ddae0372f52733f90",
+    "/assets/premios/premio-quiniela-05.png": "028e8ad57f5a081876ebc5dad5bf5ed5bd809b08",
     "/assets/tipography/Graphik Arabic Medium.otf": "11841984f30e8ea30c4ca35a7d2d1d8ffa27af95",
     "/assets/tipography/Qatar2022Arabic-Bold.ttf": "26590f3d0a4178d250c38ab475f4fd22fd3ef6e4",
     "/assets/tipography/Qatar2022Arabic-Heavy.ttf": "f8770a6fd79dc1f70851ead117a00a06cc2d7c19",
