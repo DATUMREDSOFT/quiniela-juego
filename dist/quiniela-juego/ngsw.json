@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1668209885088,
+  "timestamp": 1668211368865,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.7f8c95078eec5b30.js",
+        "/main.a488dcac740c0721.js",
         "/manifest.webmanifest",
         "/polyfills.14ed9e8f46d12ad6.js",
         "/runtime.6d6edbbf5cb227ba.js",
@@ -95,8 +95,8 @@
     "/assets/tipography/Qatar2022Arabic-Heavy.ttf": "f8770a6fd79dc1f70851ead117a00a06cc2d7c19",
     "/bg-qatar.190a2612f0c92544.jpg": "153b9d8f75c8f8e2db71ef47f418c84b6930cb6f",
     "/favicon.ico": "7585995cfa161ecd145ed0ab9cf5edf8f46a71d1",
-    "/index.html": "1fc062594da7bb846f29c41f4f5abffbb5a364b3",
-    "/main.7f8c95078eec5b30.js": "c624a46f4afce4a6418540f3145a8aa0a1db7db2",
+    "/index.html": "ec4f481099b64d4bbe576aa153b8a7c513773073",
+    "/main.a488dcac740c0721.js": "f4003b1fd48a95fffe5f72e22cc7ed7522c1baed",
     "/manifest.webmanifest": "f014012d4956c2b3b2cd435fa5d26d649b5aed13",
     "/polyfills.14ed9e8f46d12ad6.js": "97f281f1323e6176dfa535b53445dbfc26420710",
     "/runtime.6d6edbbf5cb227ba.js": "8703599285381ccb7706dc0f0071824ae0cb006c",
